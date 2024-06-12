@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+
 class SocialButton extends StatefulWidget {
   const SocialButton({super.key, required this.title, required this.onTap, this.backgroundColor, this.titleColor,  this.image});
 
