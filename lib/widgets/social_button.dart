@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -19,11 +20,11 @@ class _SocialButtonState extends State<SocialButton> {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 25),
       child: InkWell(
         onTap: widget.onTap,
         child: Container(
-          height: 70,
+          height: 75,
           width: size.width,
           padding: const EdgeInsets.symmetric(vertical: 25),
           child:  Center(
@@ -34,7 +35,7 @@ class _SocialButtonState extends State<SocialButton> {
                   height: 50,
                   width: 50,
                   decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(100)),
+                    borderRadius: BorderRadius.circular(25),
                     boxShadow: [
                       BoxShadow(
                         color: Colors.black.withOpacity(0.25),
@@ -45,8 +46,13 @@ class _SocialButtonState extends State<SocialButton> {
                     ],
                     color: Colors.white,
                   ),
-                  child: Center(child: widget.image!,),
+                  child: Center(
+                    child: ClipOval(
+                      child: widget.image!,
+                    ),
+                  ),
                 ),
+
 
                 const SizedBox(width: 12,),
                 Text(

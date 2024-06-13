@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:telead/utils/colors.dart';
+import 'package:telead/widgets/custom_button.dart';
 import 'package:telead/widgets/text.dart';
 
 import '../../../widgets/social_button.dart';
@@ -23,13 +24,65 @@ class _ContinueScreenState extends State<ContinueScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               headlineMedium(context, 'Let’s you in'),
-              const SizedBox(height: 10,),
-              SocialButton(title: 'Continue with Google',
+              const SizedBox(
+                height: 10,
+              ),
+              SocialButton(
+                title: 'Continue with Google',
                 image: Image.asset('assets/images/Group 11.png'),
-                onTap: () {  },),
-              SocialButton(title: 'Continue with Apple',
+                onTap: () {},
+              ),
+              SocialButton(
+                title: 'Continue with Apple',
                 image: Image.asset('assets/images/Group 3.png'),
-                onTap: () {  },),
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Text(
+                "( Or )",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.black54),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CustomButton(
+                title: 'Sign In with Your Account',
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an Account?",
+                    style: TextStyle(
+                      color: Colors.black45,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'SIGN UP',
+                      style: TextStyle(
+                          color: AppColors.primaryColors,
+                          fontSize: 17,
+                          fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
